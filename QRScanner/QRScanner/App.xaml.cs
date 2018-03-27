@@ -13,7 +13,7 @@ namespace QRScanner
 		{
 			InitializeComponent();
 
-			MainPage = new QRScanner.MainPage();
+			MainPage = new RoomSelector();
 		}
 
 		protected override void OnStart ()

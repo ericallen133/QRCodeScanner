@@ -12,8 +12,15 @@ namespace QRScanner.Droid
     [Activity(Label = "QRScanner", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private static MainActivity instance;
+        public static MainActivity getInstance()
+        {
+            return instance;
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
+            instance = this;
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRScanner.RoomSelector">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Room"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Picker x:Name="roomPicker" Grid.Row="0" Grid.Column="1" Title="Choose your room">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Saint John</x:String>
+                        <x:String>Moncton</x:String>
+                        <x:String>Halifax</x:String>
+                        <x:String>Fredericton</x:String>
+                        <x:String>Lobby</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button x:Name="btnSubmit" Grid.Row="1" Grid.ColumnSpan="2" Clicked="OnSubmitClicked" Text="Submit"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

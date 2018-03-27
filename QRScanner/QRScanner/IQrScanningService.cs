@@ -7,6 +7,8 @@ namespace QRScanner
 {
     public interface IQrScanningService
     {
-        Task<string> ScanAsync();
+        bool ScanAsync();
+        void setRoomId(int id);
+
     }
 }
